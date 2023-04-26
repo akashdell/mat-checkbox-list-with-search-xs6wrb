@@ -1,0 +1,30 @@
+<mat-chip-list #chipList aria-label="Fruit selection">
+  <mat-chip
+    *ngFor="let item of inputProperty"
+    [selectable]="selectable === item"
+    [removable]="removable"
+    (removed)="remove(item)"
+    [disableRipple]="true"
+    style="
+      border-radius: 3px;
+      /* border: 1px solid lightblue; */
+      background-color: blue;
+      color: white;
+    "
+  >
+    <!-- <mat-radio-button
+      [checked]="selectedItem === item"
+      (click)="selectItem(item)"
+      [disableRipple]="true"
+    ></mat-radio-button> -->
+    <span style="color: white" (click)="selectItem(item)"> {{item.name}} </span>
+
+    <mat-icon style="color: black" matChipRemove *ngIf="removable"
+      >cancel</mat-icon
+    >
+  </mat-chip>
+</mat-chip-list>
+
+<!-- Copyright 2019 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->

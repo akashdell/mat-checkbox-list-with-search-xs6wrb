@@ -1,0 +1,28 @@
+<chips-input-example
+  (outputEvent)="parentMethod($event)"
+  [inputProperty]="selectedOptions"
+></chips-input-example>
+<br />
+<app-search (search)="onSearch($event)"></app-search>
+
+<mat-selection-list
+  #shoes
+  (selectionChange)="selectionChange($event)"
+  [(ngModel)]="selected"
+>
+  <mat-list-option
+    *ngFor="let shoe of filteredOptions"
+    checkboxPosition="before"
+    [value]="shoe.id"
+    [selected]="shoesSet.get(shoe)"
+    class="mat-primary"
+  >
+    {{shoe.name}}
+  </mat-list-option>
+</mat-selection-list>
+
+<!-- <button (click)="addNewItem()">Add</button> -->
+
+<!-- Copyright 2020 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->

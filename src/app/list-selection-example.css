@@ -1,0 +1,18 @@
+/** No styles for this example. */
+/* .mat-pseudo-checkbox {
+  background-color: blue;
+} */
+
+/* ::ng-deep .mat-pseudo-checkbox:after {
+  background-color: blue;
+}
+::ng-deep .mat-option {
+  background-color: blue;
+} */
+
+::ng-deep .mat-pseudo-checkbox-checked,
+.mat-pseudo-checkbox-indeterminate,
+.mat-accent .mat-pseudo-checkbox-checked,
+.mat-accent .mat-pseudo-checkbox-indeterminate {
+  background-color: rgb(22, 19, 221) !important;
+}
